@@ -13,6 +13,7 @@ def filter_by_month():
         try:
             month = input("Which month? January, February, March, April, May or June?\n")
             break
+        # handling data type error
         except:
             print('Please Enter a valid name of a month !\n')
             continue
@@ -24,6 +25,7 @@ def filter_by_day():
         try:
             day = input("Which day? Sunday, Monday, Tuesday, ..... Saturday?\n")
             break
+        # handling data type error
         except:
             print('Please Enter a valid name of a day !\n')
             continue
@@ -48,6 +50,7 @@ def get_filters():
             city = input("Whould you like to see data for chicago, new_york_city or washington?\n")
             city = city.lower()
             break
+        #handling data type error
         except:
             print('Please Enter a valid name of a city !\n')
             continue
