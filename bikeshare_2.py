@@ -15,7 +15,7 @@ def filter_by_month():
             break
         # handling data type error
         except:
-            print('Please Enter a valid name of a month !\n')
+            print('Input error, Please Enter a valid name of a month !\n')
             continue
     return month
 
@@ -27,7 +27,7 @@ def filter_by_day():
             break
         # handling data type error
         except:
-            print('Please Enter a valid name of a day !\n')
+            print('Input error, Please Enter a valid name of a day !\n')
             continue
     return day
 
@@ -52,7 +52,7 @@ def get_filters():
             break
         #handling data type error
         except:
-            print('Please Enter a valid name of a city !\n')
+            print('Input error, Please Enter a valid name of a city !\n')
             continue
 
     filtering = input("Whould you like to filter the data with month, day, both or not at all? Type 'none' for no time filter.\n")
