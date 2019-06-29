@@ -6,7 +6,6 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
-
 # get user input for month (all, january, february, ... , june)
 def filter_by_month():
     while True:
@@ -34,7 +33,6 @@ def filter_by_day():
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
-
     Returns:
         (str) city - name of the city to analyze
         (str) month - name of the month to filter by, or "all" to apply no month filter
@@ -44,7 +42,6 @@ def get_filters():
 
 
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-
     while True:
         try:
             city = input("Whould you like to see data for chicago, new_york_city or washington?\n")
@@ -71,10 +68,6 @@ def get_filters():
         day = "all"
     print('-' * 40)
     return city, month, day
-
-
-
-
 
 
 def load_data(city, month, day):
@@ -113,7 +106,6 @@ def load_data(city, month, day):
 
     return df
 
-
 def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
 
@@ -121,7 +113,6 @@ def time_stats(df):
     start_time = time.time()
 
     # display the most common month
-
     # convert the Start Time column to datetime
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     # extract month from the Start Time column to create a month column
@@ -131,7 +122,6 @@ def time_stats(df):
     print('Most Frequent Month:', popular_month)
 
     # display the most common day of week
-
     # convert the Start Time column to datetime
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     # extract day from the Start Time column to create a day column
@@ -141,7 +131,6 @@ def time_stats(df):
     print('Most Frequent Day:', popular_day)
 
     # display the most common start hour
-
     # convert the Start Time column to datetime
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     # extract hour from the Start Time column to create an hour column
@@ -149,7 +138,6 @@ def time_stats(df):
     # find the most common hour (from 0 to 23)
     popular_hour = df['hour'].mode()[0]
     print('Most Frequent Start Hour:', popular_hour)
-
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -161,22 +149,18 @@ def station_stats(df):
     start_time = time.time()
 
     # display most commonly used start station
-
     # find the most common Start Station
     most_start_station = df['Start Station'].mode()[0]
     print('Most Commonly Used Start Station:', most_start_station)
 
 
     # display most commonly used end station
-
     # find the most common end Station
     most_end_station = df['End Station'].mode()[0]
     print('Most Commonly Used End Station:', most_end_station)
 
-########################################################################################
+
     # display most frequent combination of start station and end station trip
-
-
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -188,18 +172,14 @@ def trip_duration_stats(df):
     start_time = time.time()
 
     # display total travel time
-
     # find the sum of total travel time
     total_travel_time = df['Trip Duration'].sum()
     print('Total Travel Time:', total_travel_time)
 
     # display mean travel time
-
     # find the mean of total travel time
     mean_travel_time = df['Trip Duration'].mean()
     print('Mean Travel Time:', mean_travel_time)
-
-
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -211,13 +191,11 @@ def user_stats(df):
     start_time = time.time()
 
     # Display counts of user types
-
     # print value counts for each user type
     user_types = df['User Type'].value_counts()
     print(user_types)
 
     # Display counts of gender
-
     # print value counts for each user gender
     user_genders = df['Gender'].value_counts()
     print(user_genders)
