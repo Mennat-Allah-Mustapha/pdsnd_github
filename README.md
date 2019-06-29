@@ -6,8 +6,8 @@ README file created at : *29-Jun-2019*
 Bike Sharing System-data exploring
 
 ### Description
-This project is to explore data related to bike share systems for three major cities in the United States
-;**Chicago**, **New York City**, and **Washington**. Computing descriptive statistics and also takes in raw input 
+This project is to explore data related to bike share system for three major cities in the United States
+;**Chicago**, **New York City**, and **Washington**. Computing descriptive statistics such as the number of users in each state, which stations are used more then others, etc and also takes in raw input 
 to create an interactive experience in the terminal to present these statistics.
 
 ### Files used
